@@ -30,5 +30,5 @@ def set_dose
 end
 
 def dose_params
-  params.require(:dose).permit(:description, :ingredient)
+  params.require(:dose).permit(:description, :ingredient_id)
 end

@@ -7,7 +7,11 @@
       <img src="" />
       <div class="card-product-infos">
         <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-        <p><%= 'Product description'%></p>
+        <% cocktail.doses.each do |dose| %>
+          <ul>
+            <li><%= dose.description %> <%= dose.ingredient.name %></li>
+          </ul>
+        <% end %>
       </div>
     </div>
     <% end %>
